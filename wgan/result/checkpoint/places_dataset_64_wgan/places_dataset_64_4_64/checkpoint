@@ -1,0 +1,6 @@
+model_checkpoint_path: "WGAN.model-4662"
+all_model_checkpoint_paths: "WGAN.model-3330"
+all_model_checkpoint_paths: "WGAN.model-3663"
+all_model_checkpoint_paths: "WGAN.model-3996"
+all_model_checkpoint_paths: "WGAN.model-4329"
+all_model_checkpoint_paths: "WGAN.model-4662"

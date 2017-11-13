@@ -14,9 +14,9 @@ class DataProvider(object):
     def __init__(self, config):
         if config.dataset == 'celebA':
             self.data = glob(os.path.join("./data/celebA/img_align_celeba/*.jpg"))
-        elif config.dataset == 'lsun_64':
-            with open('../lsun_64/bedroom_train_valid.lst', 'r') as lstfile:
-                self.data = ['../lsun_64/bedroom_train/'+imgname for imgname in lstfile.read().split()]
+        elif config.dataset == 'places_dataset_64':
+            with open('../data/list', 'r') as lstfile:
+                self.data = ['../data/places_dataset_64/'+imgname for imgname in lstfile.read().split()]
         else:
             self.data = glob(os.path.join("./data/", config.dataset, "*.jpg"))
         self.len = len(self.data)

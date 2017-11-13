@@ -9,16 +9,16 @@ import tensorflow as tf
 tf.app.flags.DEFINE_string("devices", "gpu:0", "Which gpu to be used")
 
 ##params for dataset and environment
-tf.app.flags.DEFINE_string("dataset", "lsun_64", "The name of dataset [celebA, lsun_64]")
+tf.app.flags.DEFINE_string("dataset", "places_dataset_64", "The name of dataset [celebA, lsun_64]")
 tf.app.flags.DEFINE_string("dir_tag", "wgan_RMS", "dir_tag for sample_dir and checkpoint_dir")
 tf.app.flags.DEFINE_string("result_dir", "./result/", "Where to save the checkpoint and sample")
 tf.app.flags.DEFINE_boolean("visualize", False, "True for visualizing, False for nothing [False]")
 
 ##training setting
 tf.app.flags.DEFINE_boolean("is_train", True, "True for training, False for testing [False]")
-tf.app.flags.DEFINE_integer("batch_size", 64, "The size of batch images")
+tf.app.flags.DEFINE_integer("batch_size", 16, "The size of batch images")
 tf.app.flags.DEFINE_integer("epoch", 100, "Epoch to train [25]")
-tf.app.flags.DEFINE_boolean("b_loadcheckpoint", False, "b_loadcheckpoint")
+tf.app.flags.DEFINE_boolean("b_loadcheckpoint", True, "b_loadcheckpoint")
 tf.app.flags.DEFINE_integer("sample_times", 3, "sample_times")
 
 tf.app.flags.DEFINE_boolean("improved_wgan", False, "improved wgan")
@@ -38,9 +38,9 @@ tf.app.flags.DEFINE_boolean("test_random_z", True, "test random z")
 tf.app.flags.DEFINE_integer("test_images", 64, "number_of_test_images")
 tf.app.flags.DEFINE_integer("test_offset", 0, "test_offset(<1000)")
 
-##params for preprocess and model setting
+##params for paramsreprocess and model setting
 tf.app.flags.DEFINE_string("color_space", "YUV", "Color space [YUV,RGB]")
-tf.app.flags.DEFINE_integer("image_size", 64, "The size of the output images to produce [64]")
+tf.app.flags.DEFINE_integer("image_size", 128,"The size of the output images to produce [64]")
 tf.app.flags.DEFINE_integer("center_crop_size", 0, "The width of the images presented to the model, 0 for auto")
 tf.app.flags.DEFINE_boolean("is_crop", False, "True for training, False for testing [False]")
 tf.app.flags.DEFINE_integer("z_dim", 100, "z_dim")

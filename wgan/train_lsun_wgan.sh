@@ -1,1 +1,1 @@
-python mian_wgan.py --is_train=True --dataset="lsun_64" --dir_tag="wgan"
+python main_wgan.py --is_train=True --dataset="places_dataset_64" --dir_tag="wgan"
